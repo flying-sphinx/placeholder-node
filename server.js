@@ -4,7 +4,7 @@ var npid = require('npid'),
 if (process.env.NODE_PID_FILE) {
   npid.create(process.env.NODE_PID_FILE).removeOnExit();
 } else {
-  npid.create('/srv/nile/nile/shared/nile.pid').removeOnExit();
+  npid.create('/srv/nile/shared/pid/nile.pid').removeOnExit();
 }
 
 http.createServer(function (request, response) {
